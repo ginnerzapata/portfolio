@@ -54,7 +54,6 @@ const experience = [
   .section-intro h2, .contact-section h2 { font-size: clamp(2rem, 3.2vw, 3.5rem); letter-spacing: -0.06em; line-height: 1; margin-bottom: 0; max-width: 12ch; }
   .experience-list { list-style: none; margin: 0; padding: 0; }
   .experience-entry { border-top: 1px solid var(--color-border); display: grid; gap: var(--space-8); grid-template-columns: minmax(140px, 1fr) 2fr; padding: var(--space-6) 0; }
-  .experience-entry:last-child { border-bottom: 1px solid var(--color-border); }
   .experience-meta p, .experience-content li, .prose p { color: var(--color-text-muted); font-size: var(--font-size-body); line-height: var(--line-height-body); }
   .experience-meta p { margin-bottom: var(--space-1); }
   .experience-content h3 { font-size: var(--font-size-title); letter-spacing: -0.03em; margin-bottom: var(--space-4); }
@@ -63,6 +62,7 @@ const experience = [
   .contact-section { display: block; } .contact-section h2 { margin-bottom: var(--space-8); max-width: 15ch; }
   .contact-actions { align-items: center; display: flex; flex-wrap: wrap; gap: var(--space-6); }
   .text-link { color: var(--color-text-primary); font-size: var(--font-size-body); font-weight: 600; text-underline-offset: var(--space-1); }
+  @media (min-width: 901px) { .experience-entry:first-child { border-top: 0; padding-top: 0; } }
   @media (max-width: 900px) { .content-section { grid-template-columns: 1fr; } }
   @media (max-width: 720px) { .page-frame { padding: 0 var(--space-5); } .hero { min-height: calc(100svh - var(--space-20)); padding: var(--space-12) 0 var(--space-16); } h1 { letter-spacing: -0.07em; line-height: 1.04; } .content-section { gap: var(--space-8); padding: var(--space-16) 0; } .experience-entry { gap: var(--space-4); grid-template-columns: 1fr; } }
 </style>
