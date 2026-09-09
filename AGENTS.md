@@ -1,5 +1,7 @@
 ## Development
 
+Read `PROJECT.md` before making portfolio product, design, or content-architecture changes.
+
 When starting the dev server, use background mode:
 
 ```

@@ -1,6 +1,24 @@
 # Ginner Zapata Portfolio
 
-An Astro portfolio deployed as a static GitHub Pages site. It uses semantic CSS tokens, reusable Astro components, and Markdown Notes.
+Personal portfolio for Ginner Zapata, a frontend engineer building fast, polished product experiences.
+
+**Live site:** [ginnerzapata.github.io/portfolio](https://ginnerzapata.github.io/portfolio/)
+
+## Overview
+
+- Resume-backed professional experience from Vizzn and Elys Network.
+- A typography-led editorial design system built with semantic CSS tokens and self-hosted Epilogue.
+- Markdown Notes for learning in public, including future writing about Go and frontend engineering.
+- Astro React integration ready for future interactive demos and portfolio apps.
+- Static deployment to GitHub Pages through GitHub Actions.
+
+## Stack
+
+- [Astro](https://astro.build/)
+- [React](https://react.dev/), configured for future interactive islands
+- CSS custom properties and scoped Astro component styles
+- [Epilogue](https://fonts.google.com/specimen/Epilogue), self-hosted with Fontsource
+- GitHub Pages and GitHub Actions
 
 ## Development
 
