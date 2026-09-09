@@ -1,9 +1,13 @@
 :root {
   /* Primitives */
-  --neutral-0: #ffffff; --neutral-50: #f4f2ed; --neutral-200: #cfcbc3; --neutral-500: #7c8491; --neutral-950: #0b0d10; --blue-400: #7d9bff;
+  --color-ink-950: #0d0f12;
+  --color-canvas-50: #f2f0ea;
+  --color-steel-600: #406280;
+  --color-slate-500: #92979f;
+  --color-periwinkle-400: #8ba4ff;
   --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px; --space-16: 64px; --space-20: 80px; --space-24: 96px;
   /* Semantics */
-  --color-surface: var(--neutral-50); --color-surface-raised: var(--neutral-0); --color-text-primary: var(--neutral-950); --color-text-muted: var(--neutral-500); --color-border: var(--neutral-200); --color-action: var(--neutral-950); --color-action-text: var(--neutral-0); --color-status-available: var(--blue-400);
+  --color-surface: var(--color-canvas-50); --color-surface-raised: var(--color-canvas-50); --color-text-primary: var(--color-ink-950); --color-text-muted: var(--color-slate-500); --color-border: var(--color-steel-600); --color-action: var(--color-ink-950); --color-action-text: var(--color-canvas-50); --color-status-available: var(--color-periwinkle-400);
   --font-family-base: "Epilogue Variable", "Epilogue", sans-serif; --font-size-small: 0.875rem; --font-size-body: 1rem; --font-size-title: 1.25rem; --font-size-display: clamp(3.25rem, 7.15vw, 7.5rem); --line-height-tight: 0.94; --line-height-body: 1.5; --duration-fast: 160ms; --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 html { background: var(--color-surface); scroll-behavior: smooth; }
