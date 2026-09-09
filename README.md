@@ -1,43 +1,33 @@
-# Astro Starter Kit: Minimal
+# Ginner Zapata Portfolio
+
+An Astro portfolio deployed as a static GitHub Pages site. It uses semantic CSS tokens, reusable Astro components, and Markdown Notes.
+
+## Development
 
 ```sh
-pnpm create astro@latest -- --template minimal
+pnpm install
+pnpm dev
+pnpm build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Writing Notes
 
-## 🚀 Project Structure
+Create a Markdown file in `src/content/notes/` with this frontmatter:
 
-Inside of your Astro project, you'll see the following folders and files:
+```md
+---
+title: "Your note title"
+description: "A short description for readers and search engines."
+publishedAt: 2026-09-08
+tags: [Go, Learning]
+draft: false
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+Your article content goes here.
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Set `draft: true` to keep a Note out of production. A published file is available at `/portfolio/notes/<filename>/`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Deployment
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Pushes to `main` deploy through `.github/workflows/deploy.yml`. In the repository settings, set **Pages > Source** to **GitHub Actions**.

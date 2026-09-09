@@ -1,0 +1,28 @@
+---
+import "@fontsource-variable/epilogue";
+import "../styles/global.css";
+
+interface Props { title?: string; description?: string; }
+const { title = "Ginner Zapata | Frontend Engineer", description = "Frontend Engineer building fast, polished product experiences." } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const favicon = `${baseUrl}favicon.svg`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href={favicon} />
+    <link rel="icon" href={`${baseUrl}favicon.ico`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary" />
+    <title>{title}</title>
+  </head>
+  <body><a class="skip-link" href="#main-content">Skip to content</a><slot /></body>
+</html>

@@ -1,0 +1,31 @@
+---
+const navigation = [{ href: "#top", label: "Home" }, { href: "#experience", label: "Experience" }, { href: "#about", label: "About" }, { href: "#contact", label: "Contact" }];
+---
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="Ginner Zapata, home">NN</a>
+  <p class="availability"><span aria-hidden="true"></span>Available for work</p>
+  <nav class="desktop-nav" aria-label="Primary navigation">{navigation.map((item) => <a href={item.href}>{item.label}</a>)}</nav>
+  <details class="mobile-nav">
+    <summary aria-label="Open navigation"><span></span><span></span></summary>
+    <nav aria-label="Mobile navigation">{navigation.map((item) => <a href={item.href}>{item.label}</a>)}</nav>
+  </details>
+</header>
+<style>
+  .site-header { align-items: center; display: grid; gap: var(--space-5); grid-template-columns: auto 1fr auto; min-height: var(--space-20); }
+  .brand { color: var(--color-text-primary); font-size: var(--font-size-title); font-weight: 800; letter-spacing: -0.1em; line-height: 1; text-decoration: none; }
+  .availability { align-items: center; color: var(--color-text-primary); display: flex; font-size: var(--font-size-body); gap: var(--space-2); margin: 0; }
+  .availability span { background: var(--color-status-available); border-radius: 50%; height: var(--space-3); width: var(--space-3); }
+  .desktop-nav { display: flex; gap: var(--space-6); }
+  .desktop-nav a, .mobile-nav a { color: var(--color-text-muted); font-size: var(--font-size-body); text-decoration: none; transition: color var(--duration-fast) var(--ease-out); }
+  .desktop-nav a:first-child { color: var(--color-text-primary); }
+  .desktop-nav a:hover, .mobile-nav a:hover { color: var(--color-text-primary); }
+  .mobile-nav { display: none; position: relative; }
+  .mobile-nav summary { align-items: center; cursor: pointer; display: flex; flex-direction: column; gap: 5px; height: 44px; justify-content: center; list-style: none; width: 44px; }
+  .mobile-nav summary::-webkit-details-marker { display: none; }
+  .mobile-nav summary span { background: var(--color-text-primary); height: 2px; transition: transform var(--duration-fast) var(--ease-out); width: var(--space-5); }
+  .mobile-nav[open] summary span:first-child { transform: translateY(3.5px) rotate(45deg); }
+  .mobile-nav[open] summary span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+  .mobile-nav nav { background: var(--color-surface-raised); border: 1px solid var(--color-border); display: grid; gap: var(--space-1); padding: var(--space-3); position: absolute; right: 0; top: calc(100% + var(--space-2)); width: min(240px, calc(100vw - var(--space-8))); z-index: 2; }
+  .mobile-nav a { padding: var(--space-3); }
+  @media (max-width: 720px) { .site-header { gap: var(--space-3); } .availability { font-size: var(--font-size-small); } .desktop-nav { display: none; } .mobile-nav { display: block; } }
+</style>
